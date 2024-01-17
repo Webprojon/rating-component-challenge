@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --body-bg: hsl(216, 12%, 8%);
+  --card-bg: hsl(213, 19%, 18%);
+  --text-color: hsl(0, 0%, 100%);
+  --text-color-gray: hsl(217, 12%, 63%);
+  --text-color-gray-md: hsl(216, 12%, 54%);
+  --number-bg: hsl(216, 12%, 24%);
+  --btn-text-color: hsl(25, 97%, 53%);
+  --trans: all 0.2s linear;
+
+  /* Fonts */
+  --body-font-family: "Overpass", sans-serif;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+}
+
+/* GENERAL CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--body-font-family);
+}
+
+.rating__component {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 1.6rem;
+  width: 23rem;
+  background-color: var(--card-bg);
+  border-radius: 1.7rem;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background-color: var(--number-bg);
+}
+
+.heading {
+  color: var(--text-color);
+  padding: 1.7rem 0 0.8rem 0;
+}
+
+.paragraph {
+  color: var(--text-color-gray);
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: var(--number-bg);
+  color: var(--text-color-gray);
+  cursor: pointer;
+}
+
+.num:active {
+  background-color: var(--btn-text-color);
+  color: var(--text-color);
+  transition: var(--trans);
+}
+
+.submit__btn {
+  background-color: var(--btn-text-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight-700);
+  border: none;
+  padding: 0.7rem 0;
+  border-radius: 3rem;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit__btn:active {
+  background-color: var(--text-color);
+  color: var(--btn-text-color);
+  transition: var(--trans);
+}
+
+/* MARKUP STYLES */
+.wrapper {
+  text-align: center;
+}
+
+.info {
+  display: inline-block;
+  background-color: var(--number-bg);
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  margin: 1.7rem 0;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-400);
+  color: var(--btn-text-color);
+}
+
+.heading__markup {
+  color: var(--text-color);
+}
+
+.parag__markup {
+  padding-top: 0.4rem;
+  color: var(--text-color-gray);
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+/* QUERY */
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
